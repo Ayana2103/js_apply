@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+
+body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+em, img, small, sub, ol, ul, li,
+form, label, caption,article, aside, details,
+footer, header, menu, nav, section {
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+article,aside,details,
+footer,header,menu,nav,section {
+    display:block;
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+*,:after,:before {
+    background-repeat: no-repeat;
+    box-sizing: inherit
+}
+:after,:before {
+    text-decoration: inherit;
+    vertical-align: inherit
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    word-break: normal
+}
