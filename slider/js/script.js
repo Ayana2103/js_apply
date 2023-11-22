@@ -48,11 +48,11 @@ setIntervalは数値を設定することで、その数値の時間ごとに処
 setInterval(() => {
   slideCount++;
   if (slideCount < images.length) {
-  document.getElementById('img').src = images[slideCount];
+    document.getElementById('img').src = images[slideCount];
   }
   else {
-  document.getElementById('img').src = images[0];
-  slideCount = 0;
+    document.getElementById('img').src = images[0];
+    slideCount = 0;
   }
   /*5000ミリ秒(5秒)で動くように設定*/
-  }, 5000);
+}, 5000);
