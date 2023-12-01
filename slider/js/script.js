@@ -43,7 +43,9 @@ prev.addEventListener('click', function () {
 
 
 /*自動スライド*/
-const auto = setInterval(() => {
+let timer;
+timer = setInterval("auto();", 5000);
+function auto() {
   slideCount++;
   if (slideCount < images.length) {
     document.getElementById('img').src = images[slideCount];
@@ -52,10 +54,9 @@ const auto = setInterval(() => {
     document.getElementById('img').src = images[0];
     slideCount = 0;
   }
-/*5000ミリ秒(5秒)で動くように設定*/
-}, 5000);
-clearInterval(auto);
-
+}
+clearInterval(timer);
+/*console.log(timer);*/
 
 /*memo
 ■setTimeout関数
@@ -66,7 +67,7 @@ clearInterval(auto);
 
 /*setInterval(() => { (処理) }, 数値);を使うと自動で処理が実行される
 setIntervalは数値を設定することで、その数値の時間ごとに処理が実行するメソッド
-setInterval(() => {
+const auto = setInterval(() => {
   slideCount++;
   if (slideCount < images.length) {
     document.getElementById('img').src = images[slideCount];
@@ -75,5 +76,6 @@ setInterval(() => {
     document.getElementById('img').src = images[0];
     slideCount = 0;
   }
-}, 5000)
+}, 5000);
+clearInterval(auto);
 */
