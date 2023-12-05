@@ -44,7 +44,7 @@ prev.addEventListener('click', function () {
 
 /*自動スライド*/
 let timer;
-timer = setInterval("auto();", 5000);
+timer = setInterval(auto, 5000);
 function auto() {
   slideCount++;
   if (slideCount < images.length) {
@@ -65,7 +65,8 @@ clearInterval(timer);
 何度も動作させたい場合はこちらを使う。
 
 
-/*setInterval(() => { (処理) }, 数値);を使うと自動で処理が実行される
+setInterval(() => { (処理) }, 数値);を使うと自動で処理が実行される
+アロー関数
 setIntervalは数値を設定することで、その数値の時間ごとに処理が実行するメソッド
 const auto = setInterval(() => {
   slideCount++;
@@ -77,5 +78,4 @@ const auto = setInterval(() => {
     slideCount = 0;
   }
 }, 5000);
-clearInterval(auto);
 */
