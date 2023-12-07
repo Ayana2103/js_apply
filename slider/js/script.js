@@ -12,6 +12,8 @@ const next = document.getElementById('next');
 next.addEventListener('click', function () {
   /*カウントをひとつずつ増やす*/
   slideCount++;
+  clearInterval(timer);
+  timer = setInterval(auto, 5000);
   /*スライド用のカウントの数が、スライド画像の総数よりも少ない
   という条件を作る事で画像の総数が上限のスライドを作成出来る*/
   if (slideCount < images.length) {
@@ -26,6 +28,8 @@ next.addEventListener('click', function () {
 prev.addEventListener('click', function () {
   /*カウントをひとつずつ減らす*/
   slideCount--;
+  clearInterval(timer);
+  timer = setInterval(auto, 5000);
   /*nextと同じ設定にすると最初のスライド画像の後退ボタンを押すと、
   slideCountの値が-1になり最後のスライド画像が表示されない。
   その回避でelse文で-1以下の設定をしたいので、
@@ -55,8 +59,6 @@ function auto() {
     slideCount = 0;
   }
 }
-clearInterval(timer);
-/*console.log(timer);*/
 
 /*memo
 ■setTimeout関数
