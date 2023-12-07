@@ -66,18 +66,8 @@ function auto() {
 ■setInterval関数
 何度も動作させたい場合はこちらを使う。
 
-
+■アロー関数
 setInterval(() => { (処理) }, 数値);を使うと自動で処理が実行される
-アロー関数
 setIntervalは数値を設定することで、その数値の時間ごとに処理が実行するメソッド
-const auto = setInterval(() => {
-  slideCount++;
-  if (slideCount < images.length) {
-    document.getElementById('img').src = images[slideCount];
-  }
-  else {
-    document.getElementById('img').src = images[0];
-    slideCount = 0;
-  }
-}, 5000);
+clearIntervalで解除が可能。
 */
