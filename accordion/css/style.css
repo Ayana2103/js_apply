@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+html{
+  font-size: 100%;
+}
+li{
+  list-style: none;
+}
+
+.accordion__btn{
+  position: relative;
+  padding: 8px 0 8px 8px;
+  background-color: #000;
+  color: #fff;
+  width: 50%;
+  text-align: left;
+  font-size: 1rem;
+  height: 3rem;
+}
+.accordion__btn span{
+  position: absolute;
+  right: 20px;
+}
+.accordion__btn.active span{
+  transform: rotate(45deg);
+}
+
+
+.accordion__contents{
+  display: none;
+  width: 50%;
+  font-size: 0.875rem;
+}
+.accordion__contents li{
+  padding: 8px 0 8px 8px;
+  text-align: left;
+  border: 1px solid #c8c8c8;
+  border-top: none;
+}
+.accordion__contents.active{
+  display: block;
+}
